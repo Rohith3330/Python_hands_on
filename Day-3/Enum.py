@@ -33,8 +33,17 @@ class Order:
 
 # Example usage:
 order = Order(order_id="12345")
-print(order.status)
-order.update_status(OrderStatus.CONFIRMED)
-order.update_status(OrderStatus.PREPARING)
-order.update_status(OrderStatus.OUT_FOR_DELIVERY)
-order.update_status(OrderStatus.DELIVERED)
+print(f"Current Order Status: {order.status}")  
+
+while True:
+    new_status_str = input("Enter new status (or 'exit' to quit): ").upper()
+    if new_status_str == "EXIT":
+        break
+    
+    try:
+        new_status = OrderStatus[new_status_str]
+        order.update_status(new_status)
+    except ValueError:
+        print("Invalid status. Please enter a valid status or 'exit'.")
+
+print(f"Order status updated. Final Status: {order.status}")

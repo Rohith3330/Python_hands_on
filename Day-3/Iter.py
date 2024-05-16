@@ -12,7 +12,7 @@ class PassingScoreIterator:
             score = self.scores[self.index]
             self.index += 1
             if score >= self.passing_threshold:
-                return score
+                return score 
         raise StopIteration
 
 # Example usage:
