@@ -18,7 +18,9 @@ def example_function_1():
 def example_function_2():
     # Your code here
     time.sleep(1)
-
-# Call the decorated functions
-example_function_1()
-example_function_2()
+def main():
+    # Call the decorated functions
+    example_function_1()
+    example_function_2()
+if __name__ == "__main__":
+    main()

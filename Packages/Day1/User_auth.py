@@ -17,9 +17,12 @@ def authenticate(username, password):
             if choice.lower() == 'exit':
                 break  # Break out of the loop if the user chooses to exit
 
-# Define predefined username and password
-username = "user123"
-password = "1234"
+def main():
+    # Define predefined username and password
+    username = "user123"
+    password = "1234"
 
-# Call the authentication function
-authenticate(username, password)
+    # Call the authentication function
+    authenticate(username, password)
+if __name__ == "__main__":
+    main()

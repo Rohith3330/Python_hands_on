@@ -32,18 +32,21 @@ class Order:
         self.status = new_status
 
 # Example usage:
-order = Order(order_id="12345")
-print(f"Current Order Status: {order.status}")  
+def main():
+    order = Order(order_id="12345")
+    print(f"Current Order Status: {order.status}")  
 
-while True:
-    new_status_str = input("Enter new status (or 'exit' to quit): ").upper()
-    if new_status_str == "EXIT":
-        break
-    
-    try:
-        new_status = OrderStatus[new_status_str]
-        order.update_status(new_status)
-    except ValueError:
-        print("Invalid status. Please enter a valid status or 'exit'.")
+    while True:
+        new_status_str = input("Enter new status (or 'exit' to quit): ").upper()
+        if new_status_str == "EXIT":
+            break
+        
+        try:
+            new_status = OrderStatus[new_status_str]
+            order.update_status(new_status)
+        except ValueError:
+            print("Invalid status. Please enter a valid status or 'exit'.")
 
-print(f"Order status updated. Final Status: {order.status}")
+    print(f"Order status updated. Final Status: {order.status}")
+if __name__ == "__main__":
+    main()

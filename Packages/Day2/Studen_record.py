@@ -39,33 +39,35 @@ class StudentRecordSystem:
     def get_all_students(self):
         return self.students.values()
 
+def main():
+    system = StudentRecordSystem()
 
-system = StudentRecordSystem()
+    # Adding students
+    student1_id = system.add_student("Alice", 15, 10)
+    student2_id = system.add_student("Bob", 14, 9)
 
-# Adding students
-student1_id = system.add_student("Alice", 15, 10)
-student2_id = system.add_student("Bob", 14, 9)
+    # Updating student information
+    system.update_student(student1_id, {'name': 'Alice Smith', 'age': 16})
 
-# Updating student information
-system.update_student(student1_id, {'name': 'Alice Smith', 'age': 16})
+    # Retrieving student details
+    print(system.get_student_details(student1_id))
 
-# Retrieving student details
-print(system.get_student_details(student1_id))
+    # Retrieving students by grade
+    print(system.get_students_by_grade(10))
 
-# Retrieving students by grade
-print(system.get_students_by_grade(10))
+    # Retrieving all students
+    print(system.get_all_students())
 
-# Retrieving all students
-print(system.get_all_students())
+    # Removing a student
+    system.remove_student(student2_id)
 
-# Removing a student
-system.remove_student(student2_id)
+    # Retrieving student details
+    print(system.get_student_details(student1_id))
 
-# Retrieving student details
-print(system.get_student_details(student1_id))
+    # Retrieving students by grade
+    print(system.get_students_by_grade(10))
 
-# Retrieving students by grade
-print(system.get_students_by_grade(10))
-
-# Retrieving all students
-print(system.get_all_students())
+    # Retrieving all students
+    print(system.get_all_students())
+if __name__ == "__main__":
+    main()
