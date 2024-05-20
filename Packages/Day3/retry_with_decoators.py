@@ -21,4 +21,7 @@ def generate_random_number():
     return random.randint(1, 10)
 
 # Call the decorated function
-generate_random_number()
+def main():
+    generate_random_number()
+if __name__ == "__main__":
+    main()

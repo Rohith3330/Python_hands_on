@@ -16,10 +16,13 @@ class PassingScoreIterator:
         raise StopIteration
 
 # Example usage:
-scores = [85, 60, 75, 90, 55, 65]
-passing_threshold = 70
+def main():
+    scores = [85, 60, 75, 90, 55, 65]
+    passing_threshold = 70
 
-passing_scores_iterator = PassingScoreIterator(scores, passing_threshold)
+    passing_scores_iterator = PassingScoreIterator(scores, passing_threshold)
 
-for score in passing_scores_iterator:
-    print(score)
+    for score in passing_scores_iterator:
+        print(score)
+if __name__ == "__main__":
+    main()

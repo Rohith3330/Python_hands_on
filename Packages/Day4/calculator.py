@@ -40,6 +40,8 @@ def calculator():
         if retry != 'yes' or retry!='y':
             print("Goodbye!")
             break
-
-# Running the calculator function
-calculator()
+def main():
+    # Running the calculator function
+    calculator()
+if __name__ == "__main__":
+    main()

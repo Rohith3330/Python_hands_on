@@ -15,21 +15,23 @@ def admit_student(max_capacity=10):
       return "Admission failed: Maximum capacity reached."
 
   return admit
+def main():
+    # Create an instance of the admit function with the specific capacity
+    school_admit = admit_student()
 
-# Create an instance of the admit function with the specific capacity
-school_admit = admit_student()
-
-# Simulate admitting students
-print(school_admit())
-print(school_admit())
-print(school_admit())
-print(school_admit())
-print(school_admit())
-print(school_admit())
-print(school_admit())
-print(school_admit())
-print(school_admit())
-print(school_admit())  
-print(school_admit())  # Output: Admission failed: Maximum capacity reached.
+    # Simulate admitting students
+    print(school_admit())
+    print(school_admit())
+    print(school_admit())
+    print(school_admit())
+    print(school_admit())
+    print(school_admit())
+    print(school_admit())
+    print(school_admit())
+    print(school_admit())
+    print(school_admit())  
+    print(school_admit())  # Output: Admission failed: Maximum capacity reached.
 
 # Note: You can call school_admit() multiple times to simulate admissions
+if __name__ == "__main__":
+    main()
